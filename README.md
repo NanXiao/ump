@@ -1,5 +1,5 @@
 # ump
-A universal thread-safe memory pool. This simple memory can be used if following conditions are satisfied:  
+A universal thread-safe memory pool. This simple memory pool can be used if following conditions are satisfied:  
 (1) The memory sizes are some fixed numbers. E.g, `32`, `64`, `128`, etc, not random;  
 (2) The allocating memory operation is not so cheap, e.g., CUDA.  
 
