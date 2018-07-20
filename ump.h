@@ -48,8 +48,11 @@ public:
         if (q.empty())
         {
             ptr = _alloc_fun(size);
-            _ptr_map[ptr] = size;
-            _used_mem += size;
+            if (ptr)
+            {
+                _ptr_map[ptr] = size;
+                _used_mem += size;
+            }
         }
         else
         {
