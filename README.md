@@ -17,6 +17,12 @@ When freeing memory, the memory pool queries the second hash table to get the si
 ## Heads-up 
 The number of keys of hash tables will affect their look-up performance, so if hash tables have too many keys, the performance may be downgraded.  
 
+## Usage
+
+	$ git clone https://github.com/NanXiao/ump.git
+	$ cd ump
+	$ make && make install
+
 ## Example 
 
 	#include <cstdlib>
@@ -42,11 +48,12 @@ The number of keys of hash tables will affect their look-up performance, so if h
 
 Build and run it:  
 
-	$ c++ -g -O2 -Wall main.cpp
-	$ ./a.out
-	0x55db2b807160
-	0x55db2b807620
-	0x55db2b807160
+	$ c++ -I/usr/local/include -L/usr/local/lib -Wall -o test test.cpp -lump
+	$ ./test
+	0x60b9d641080
+	0x60c32e59600
+	0x60b9d641080
 	200
+
 
 
